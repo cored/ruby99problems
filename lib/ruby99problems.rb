@@ -10,4 +10,9 @@ module MyListMethods
     penultimate(size + 1)
   end
 
+  def nth(index, counter = 0)
+    return self[counter] if counter == index
+    nth(index, counter + 1)
+  end
+
 end
